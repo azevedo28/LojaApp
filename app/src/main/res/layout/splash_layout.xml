@@ -5,24 +5,40 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:gravity="center_vertical"
     android:orientation="vertical"
-    tools:context=".SplashActivity">
+    tools:context=".SplashActivity"
+    tools:ignore="ExtraText">
 
-    <com.google.android.material.progressindicator.LinearProgressIndicator
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:indeterminate="true" />
 
     <ImageView
         android:layout_width="200dp"
         android:layout_height="200dp"
+        android:layout_gravity="center_horizontal"
         android:scaleType="centerCrop"
         android:src="@drawable/zuma" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:shadowColor="#000"
+        android:shadowDx="20"
+        android:shadowRadius="20"
         android:text="Loja do Zuma"
-        />
+        android:textColor="#ffa500"
+        android:textSize="50sp"
+        android:textStyle="bold"<!--É a grossura da sombra-->
+    <!--para os lados, se colocar número positivo vai para direita, se colocar negativo é para esquerda (Dx)-->
+    <!--Se colocar número positivo, vai para cima, se for negativo para baixo (Dy)-->
+    />
+
+    <com.google.android.material.progressindicator.CircularProgressIndicator
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="30dp"
+        android:indeterminate="true" />
 </LinearLayout>
